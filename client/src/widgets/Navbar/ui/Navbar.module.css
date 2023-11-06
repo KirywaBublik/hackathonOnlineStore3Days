@@ -1,0 +1,64 @@
+.Navbar {
+  height: var(--navbar-height);
+  box-shadow: 0px 1px 10px var(--navbar-shadow-color);
+  padding: 20px 40px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  font-size: 2rem;
+  align-items: end;
+}
+
+.controls {
+  display: flex;
+  gap: 2.25rem;
+  align-items: end;
+}
+
+.menuBtn {
+  display: none;
+}
+
+.mobileNavigation {
+  position: absolute;
+  flex-direction: column;
+  display: none;
+  top: var(--navbar-height);
+  right: 10px;
+  background-color: var(--bg-color);
+  padding: 20px;
+  border: 2px solid var(--primary-color);
+  gap: 20px;
+  z-index: 99;
+}
+
+.mobileNavigation.show {
+  display: flex;
+}
+
+.user {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 910px) {
+  .menuBtn {
+    display: block;
+  }
+
+  .links {
+    display: none;
+  }
+  .authBtn {
+    font-size: 1rem;
+  }
+
+  .controls {
+    gap: 1rem;
+  }
+}
